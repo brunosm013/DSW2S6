@@ -9,18 +9,12 @@
 <link rel="icon" href="/cervejeiro/layout/images/favicon.png" />
 <title>Cervejeiro</title>
 <link rel="stylesheet" type="text/css"
-	href="/cervejeiro/layout/stylesheets/vendors.min.css" />
+	th:href="@{/layout/stylesheets/vendors.min.css}" />
 <link rel="stylesheet" type="text/css"
-	href="/cervejeiro/layout/stylesheets/algaworks.min.css" />
+	th:href="@{/layout/stylesheets/algaworks.min.css}" />
 <link rel="stylesheet" type="text/css"
-	href="/cervejeiro/layout/stylesheets/application.css" />
+	th:href="@{/layout/stylesheets/application.css}" />
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
 </head>
 <body>
 
@@ -33,7 +27,7 @@
 
 				<div class="navbar-header">
 					<a class="navbar-brand  hidden-xs" href="#"> <img
-						alt="AlgaWorks" src="/cervejeiro/layout/images/logo.png" />
+						alt="AlgaWorks" th:src="@{/layout/images/logo.png}" />
 					</a>
 
 					<ul class="nav  navbar-nav">
@@ -110,8 +104,8 @@
 	</div>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="/cervejeiro/layout/javascripts/vendors.min.js"></script>
-	<script src="/cervejeiro/layout/javascripts/algaworks.min.js"></script>
+	<script th:src="@{/layout/javascripts/vendors.min.js}"></script>
+	<script src="@{/layout/javascripts/algaworks.min.js}"></script>
 
 </body>
 </html>
