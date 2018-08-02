@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/layout_padrao">
+
+<body>
+
+	<section layout:fragment="conteudo">
+		<div class="page-header">
+			<div class="container-fluid">
+				<h1>Cadastro de produto</h1>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<form method="post" class="form-vertical  js-form-loading"
+				th:object="${cerveja}">
+
+				<div class="row">
+					<div class="form-group col-sm-3">
+						<label for="input-produto-nome">Nome</label> <input id="nome"
+							type="text" class="form-control" name="nome" />
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="input-produto-nome">SKU</label> <input id="sku"
+							type="text" class="form-control" name="sku" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-9">
+						<label for="input-produto-descricao">Descrição</label>
+						<textarea id="descricao" rows="3" class="form-control"></textarea>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-3 form-group">
+						<label for="estilo">Estilo</label> <select id="estilo"
+							class="form-control">
+							<option value="">Selecione o estilo</option>
+							<option value="1">Pale Lager</option>
+						</select>
+					</div>
+					<div class="col-sm-6 form-group">
+						<label for="sabor">Sabor</label> <select id="sabor"
+							class="form-control">
+							<option value="">Selecione o sabor</option>
+							<option value="1">Feijão</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-3 form-group">
+						<label for="teor_alcolico">Teor alcólico</label>
+						<div class="input-group">
+							<input id="teor_alcolico" type="text" class="form-control">
+							<div class="input-group-addon">%</div>
+						</div>
+					</div>
+					<div class="col-sm-6 form-group">
+						<label for="origem">Origem</label> <select id="origem"
+							class="form-control">
+							<option value="">Selecione a origem</option>
+							<option value="1">Importada</option>
+							<option value="2">Nacional</option>
+						</select>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="form-group">
+							<label for="input-produto-preco">Preço unitário</label>
+							<div class="input-group">
+								<div class="input-group-addon">R$</div>
+								<input id="input-produto-preco" type="text" class="form-control"
+									placeholder="R$" />
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="form-group">
+							<label for="input-produto-estoque">Estoque</label> <input
+								id="input-produto-estoque" type="text" class="form-control"
+								placeholder="Unidades" />
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="form-group">
+							<label for="comissao">Comissão</label>
+							<div class="input-group">
+								<input id="comissao" type="text" class="form-control"
+									placeholder="Comissão" />
+								<div class="input-group-addon">%</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<button class="btn  btn-primary" type="submit">Salvar</button>
+				</div>
+
+			</form>
+		</div>
+	</section>
+
+	<footer class="aw-layout-footer  js-content">
+		<div class="container-fluid">
+			<span class="aw-footer-disclaimer">&copy; 2018 Bruno Siqueira.
+				Todos os direitos reservados.</span>
+		</div>
+	</footer>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="/cervejeiro/layout/javascripts/vendors.min.js"></script>
+	<script src="/cervejeiro/layout/javascripts/algaworks.min.js"></script>
+
+</body>
+</html>
