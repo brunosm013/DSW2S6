@@ -27,31 +27,34 @@
 							type="text" class="form-control" name="email" />
 					</div>
 					<div class="form-group col-sm-3">
-						<label for="input-cpf-cnpj">Data Nascimento</label> <input id="data-nascimento"
-							type="text" class="form-control data-nascimento" name="data-nascimento" />
+						<label for="input-cpf-cnpj">Data Nascimento</label> <input
+							id="data-nascimento" type="text"
+							class="form-control data-nascimento" name="data-nascimento" />
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="form-group col-sm-3">
-						<label for="input-tipo-pessoa">Senha</label>
-						<input id="senha"
+						<label for="input-tipo-pessoa">Senha</label> <input id="senha"
 							type="password" class="form-control" name="senha" />
 					</div>
 					<div class="form-group col-sm-3">
-						<label for="input-cpf-cnpj">Confirmação de senha</label> <input id="confirmacao-senha"
-							type="password" class="form-control" name="confirmacao-senha" />
+						<label for="input-cpf-cnpj">Confirmação de senha</label> <input
+							id="confirmacao-senha" type="password" class="form-control"
+							name="confirmacao-senha" />
 					</div>
 					<div class="form-group col-sm-3">
 						<label for="input-cpf-cnpj">Status</label>
 						<div>
 							<div class="checkbox  checkbox-inline">
-								<input type="checkbox" name="status"> <label>Ativo</label>
+								<input type="checkbox" name="status" class="js-status"
+									data-on-text="Ativo" data-size="small" data-off-text="Inativo"
+									data-off-color="danger">
 							</div>
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<div class="form-group col-sm-4">
 						<label for="input-cpf-cnpj">Grupos</label>
@@ -72,10 +75,14 @@
 
 			</form>
 		</div>
-		
-		<div th:replace="estilo/cadastro_rapido_estilo">
-		</div>
+
+		<div th:replace="estilo/cadastro_rapido_estilo"></div>
 	</section>
 
 </body>
+<th:block layout:fragment="js-extra">
+	<script type="text/javascript">
+		$('.js-status').bootstrapSwitch();
+	</script>
+</th:block>
 </html>

@@ -8,19 +8,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" href="/cervejeiro/layout/images/favicon.png" />
 <title>Cervejeiro</title>
+
 <link rel="stylesheet" type="text/css"
 	th:href="@{/layout/stylesheets/vendors.min.css}" />
+	
 <link rel="stylesheet" type="text/css"
 	th:href="@{/layout/stylesheets/algaworks.min.css}" />
+	
 <link rel="stylesheet" type="text/css"
 	th:href="@{/layout/stylesheets/application.css}" />
+	
 <link rel="stylesheet" type="text/css"
 	th:href="@{/stylesheets/cervejeiro.css}" />
+	
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/css/bootstrap2/bootstrap-switch.min.css" />
+	
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+	
 <script th:src="@{/layout/javascripts/cervejeiro.js}"></script>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js"></script>
+
 </head>
 <body>
 
@@ -38,7 +52,6 @@
 
 	<script th:src="@{/layout/javascripts/vendors.min.js}"></script>
 	<script th:src="@{/layout/javascripts/algaworks.min.js}"></script>
-
-
+	<th:block layout:fragment="js-extra"></th:block>
 </body>
 </html>

@@ -11,3 +11,25 @@ $(document).ready(function($, mask) {
 
 	$('.cpf-cnpj').mask('000.000.000-000', options);
 });
+
+function getEstados() {
+	jQuery.support.cors = true;
+	$.ajax({
+		url : "http://www.geonames.org/childrenJSON?geonameId=3469034",
+		type : 'GET',
+		async : true,
+	}).done(
+			function(obj) {
+				if (obj != null) {
+					var data = obj.geonames;
+					var selectbox = $('#estado');
+					selectbox.find('option').remove();
+					$.each(data, function(i, d) {
+						$('<option>').val(d.name).text(d.name).appendTo(
+								selectbox);
+					});
+				}
+			}).fail(function(jqXHR, textStatus, msg) {
+		alert(msg);
+	});
+}
