@@ -34,11 +34,18 @@
 
 				<div class="row">
 					<div class="col-sm-3 form-group">
-						<label for="estilo">Estilo</label> <select id="estilo"
-							class="form-control">
-							<option value="">Selecione o estilo</option>
-							<option value="1">Pale Lager</option>
-						</select>
+						<label for="estilo">Estilo</label>
+						<div class="cv-field-action">
+							<select id="estilo" class="form-control">
+								<option value="">Selecione o estilo</option>
+								<option value="1">Pale Lager</option>
+							</select>
+							<div class="cv-field-action-icon">
+								<a href="#" data-toogle="modal" data-target="#modalCadastroRapidoEstilo">
+									<i class="glyphicon glyphicon-plus-sign cv-glyphicon-large"></i>
+								</a>
+							</div>
+						</div>
 					</div>
 					<div class="col-sm-6 form-group">
 						<label for="sabor">Sabor</label> <select id="sabor"
@@ -53,7 +60,8 @@
 					<div class="col-sm-3 form-group">
 						<label for="teor_alcolico">Teor alcólico</label>
 						<div class="input-group">
-							<input id="teor_alcolico" type="text" class="form-control">
+							<input id="teor_alcolico" type="text"
+								class="form-control js-decimal">
 							<div class="input-group-addon">%</div>
 						</div>
 					</div>
@@ -74,8 +82,8 @@
 							<label for="input-produto-preco">Preço unitário</label>
 							<div class="input-group">
 								<div class="input-group-addon">R$</div>
-								<input id="input-produto-preco" type="text" class="form-control js-decimal"
-									placeholder="R$" />
+								<input id="input-produto-preco" type="text"
+									class="form-control js-decimal" placeholder="R$" />
 							</div>
 						</div>
 					</div>
@@ -92,7 +100,7 @@
 						<div class="form-group">
 							<label for="comissao">Comissão</label>
 							<div class="input-group">
-								<input id="comissao" type="text" class="form-control"
+								<input id="comissao" type="text" class="form-control js-decimal"
 									placeholder="Comissão" />
 								<div class="input-group-addon">%</div>
 							</div>

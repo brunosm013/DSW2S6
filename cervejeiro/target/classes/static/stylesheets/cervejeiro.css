@@ -1,0 +1,12 @@
+.cv-glyphicon-large {
+	font-size: 18px;
+}
+
+.cv-field-action {
+	display: flex;
+}
+
+.cv-field-action-icon {
+	margin: 6px 0 0 5px;
+}
+
