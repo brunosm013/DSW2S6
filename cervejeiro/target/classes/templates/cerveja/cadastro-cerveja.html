@@ -41,7 +41,7 @@
 								<option value="1">Pale Lager</option>
 							</select>
 							<div class="cv-field-action-icon">
-								<a href="#" data-toogle="modal" data-target="#modalCadastroRapidoEstilo">
+								<a href="#" data-toggle="modal" data-target="#modalCadastroRapidoEstilo">
 									<i class="glyphicon glyphicon-plus-sign cv-glyphicon-large"></i>
 								</a>
 							</div>
@@ -115,13 +115,10 @@
 
 			</form>
 		</div>
+		
+		<div th:replace="estilo/cadastro_rapido_estilo">
+		</div>
 	</section>
 
-	<footer class="aw-layout-footer  js-content">
-		<div class="container-fluid">
-			<span class="aw-footer-disclaimer">&copy; 2018 Bruno Siqueira.
-				Todos os direitos reservados.</span>
-		</div>
-	</footer>
 </body>
 </html>

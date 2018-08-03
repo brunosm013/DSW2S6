@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/layout_padrao">
+
+<body>
+
+	<section layout:fragment="conteudo">
+		<div class="page-header">
+			<div class="container-fluid">
+				<h1>Cadastro de usuário</h1>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<form method="post" class="form-vertical  js-form-loading"
+				th:object="${cerveja}">
+
+				<div class="row">
+					<div class="form-group col-sm-12">
+						<label for="input-produto-nome">Nome</label> <input id="nome"
+							type="text" class="form-control" name="nome" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="input-cpf-cnpj">Email</label> <input id="email"
+							type="text" class="form-control" name="email" />
+					</div>
+					<div class="form-group col-sm-3">
+						<label for="input-cpf-cnpj">Data Nascimento</label> <input id="data-nascimento"
+							type="text" class="form-control data-nascimento" name="data-nascimento" />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-sm-3">
+						<label for="input-tipo-pessoa">Senha</label>
+						<input id="senha"
+							type="password" class="form-control" name="senha" />
+					</div>
+					<div class="form-group col-sm-3">
+						<label for="input-cpf-cnpj">Confirmação de senha</label> <input id="confirmacao-senha"
+							type="password" class="form-control" name="confirmacao-senha" />
+					</div>
+					<div class="form-group col-sm-3">
+						<label for="input-cpf-cnpj">Status</label>
+						<div>
+							<div class="checkbox  checkbox-inline">
+								<input type="checkbox" name="status"> <label>Ativo</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="form-group col-sm-4">
+						<label for="input-cpf-cnpj">Grupos</label>
+						<div>
+							<div class="checkbox  checkbox-inline">
+								<input type="checkbox" name="grupos"> <label>Administrador</label>
+							</div>
+							<div class="checkbox  checkbox-inline">
+								<input type="checkbox" name="grupos"> <label>Vendedor</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<button class="btn  btn-primary" type="submit">Salvar</button>
+				</div>
+
+			</form>
+		</div>
+		
+		<div th:replace="estilo/cadastro_rapido_estilo">
+		</div>
+	</section>
+
+</body>
+</html>
