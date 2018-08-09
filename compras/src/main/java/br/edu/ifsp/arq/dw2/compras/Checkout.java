@@ -1,10 +1,10 @@
 package br.edu.ifsp.arq.dw2.compras;
 
 public class Checkout {
-	private ImpressoraHP impressora;
+	private Impressora impressora;
 
-	public Checkout() {
-		this.impressora = new ImpressoraHP();
+	public Checkout(Impressora impressora) {
+		this.impressora = impressora;
 	}
 
 	public void finalizar() {
