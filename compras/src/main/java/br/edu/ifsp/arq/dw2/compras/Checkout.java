@@ -1,11 +1,12 @@
 package br.edu.ifsp.arq.dw2.compras;
 
-public class Checkout {
-	private Impressora impressora;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-	public Checkout(Impressora impressora) {
-		this.impressora = impressora;
-	}
+@Component
+public class Checkout {
+	@Autowired
+	private Impressora impressora;
 
 	public void finalizar() {
 		impressora.imprimir("Nota fiscal paulista");
