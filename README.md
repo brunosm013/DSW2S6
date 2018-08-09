@@ -1,3 +1,3 @@
 # DSW2S6
 
-#Então ta lá
+Repositório da disciplina de web 2
